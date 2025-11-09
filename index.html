@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudioPress-like Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="animate-on-load logo-img">
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li class="animate-on-load"><a href="index.html">Home</a></li>
+            <li class="animate-on-load"><a href="services.html">Our Services</a></li>
+            <li class="animate-on-load"><a href="#">Contact</a></li>
+            <li class="animate-on-load"><a href="#" id="socialMediaLink">Social Media</a></li>
+            <li class="animate-on-load"><a href="#" class="btn-my-studiopress">My StudioPress</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="color-pool" aria-hidden="true">
+            <span class="blob blob-1"></span>
+            <span class="blob blob-2"></span>
+            <span class="blob blob-3"></span>
+            <span class="blob blob-4"></span>
+        </div>
+        <div class="hero-content">
+            <h1 class="animate-on-load">HI my neme is Sohi Siddiquee</h1>
+            <p class="subheading animate-on-load">Create stunning, high-performance WordPress websites with the most trusted website building framework in the industry.</p>
+        </div>
+    </header>
+
+    <section class="genesis-pro">
+        <div class="container">
+            <div class="content-left animate-on-scroll">
+                <h2 class="animate-on-load">Genesis Pro</h2>
+                <p class="animate-on-scroll">Take your WordPress site building to the next level with premium blocks, site templates, and features that help you build better websites faster.</p>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary animate-on-load">Read More</a>
+                    <a href="#" class="btn btn-secondary animate-on-load">Sign Up</a>
+                </div>
+            </div>
+            <div class="content-right animate-on-scroll">
+                <div class="image-fade-container" data-transition-duration="4">
+                    <img src="sohi.png.jpeg" alt="Website Layout" class="fade-image">
+                    <img src="sohi4.png.jpeg" alt="Secondary Layout" class="fade-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <div class="radial-menu">
+        <div class="menu-toggle">
+            <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item instagram">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="menu-item twitter">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="menu-item facebook">
+                <a href="https://www.facebook.com/sohi.siddiquee" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="menu-item linkedin">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="https.://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const radialMenu = document.querySelector('.radial-menu');
+        const socialMediaLink = document.getElementById('socialMediaLink');
+
+        menuToggle.addEventListener('click', () => {
+            radialMenu.classList.toggle('active');
+        });
+
+        // Trigger radial menu from navigation
+        socialMediaLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            radialMenu.classList.add('active');
+            // Scroll to the menu smoothly
+            radialMenu.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
